@@ -2,6 +2,7 @@ var express = require('express');
 var parser = require('body-parser');
 var morgan = require('morgan');
 var path = require('path');
+var routes = require('./routes');
 
 var app = express();
 
@@ -17,6 +18,9 @@ app.use(parser.json());
 
 // Serve static assets from client folder
 app.use(express.static(path.join(__dirname, '../client')));
+
+// Routes
+app.use('/api', routes);
 
 // Start server
 app.listen(port, function() {
