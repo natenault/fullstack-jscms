@@ -15,7 +15,7 @@ app.use(morgan('dev'));
 app.use(parser.urlencoded({extended: true}));
 app.use(parser.json());
 
-// Serve static assets
+// Serve static assets from client folder
 app.use(express.static(path.join(__dirname, '../client')));
 
 // Start server
