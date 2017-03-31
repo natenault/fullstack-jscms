@@ -1,7 +1,4 @@
-// var Post = require('../models').Post;
-// var User = require('../models').User;
-
-var db = require('../config/db');
+var db = require('../config/db.js');
 
 module.exports = {
 

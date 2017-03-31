@@ -2,30 +2,52 @@
 
 var Sequelize = require('sequelize');
 var env = process.env.NODE_ENV || 'development';
-var connection = new Sequelize('jscms', '', '', {
+var db = new Sequelize('jscms', '', '', {
   dialect: 'postgres'
 });
 
-var db = {};
-
-db.Sequelize = Sequelize;
-db.connection = connection;
-
 // Models
-db.User = require('../models/user.js')(connection, Sequelize);
-db.Post = require('../models/post.js')(connection, Sequelize);
-db.Category = require('../models/category.js')(connection, Sequelize);
+var Post = db.define('Post', {
+  title: {
+    type: Sequelize.STRING,
+    unique: true,
+    required: true,
+    allowNull: false
+  },
+  content: {
+    type: Sequelize.TEXT
+  }
+});
+
+var User = db.define('User', {
+  username: {
+    type: Sequelize.STRING,
+    unique: true,
+    required: true,
+    allowNull: false
+  },
+  password: {
+    type: Sequelize.STRING,
+  }
+});
+
+var Category = db.define('Category', {
+  title: {
+    type: Sequelize.STRING,
+    required: true,
+    allowNull: false
+  }
+});
 
 // Associations
-db.User.hasMany(db.Post);
-db.Post.belongsTo(db.User);
-db.Post.belongsTo(db.Category);
-db.Category.hasMany(db.Post);
+User.hasMany(Post);
+Post.belongsTo(User);
+Post.belongsTo(Category);
+Category.hasMany(Post);
 
-// db.User.sync();
-// db.Post.sync();
-// db.Category.sync();
+User.sync();
+Post.sync();
+Category.sync();
 
-// connection.sync();
-
-module.exports = db;
+exports.User = User;
+exports.Post = Post;
