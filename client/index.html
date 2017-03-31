@@ -1,22 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
   <title>Fullstack JSCms</title>
 
-  <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="styles/style.css">
 </head>
-<body>
+<body ng-app="jscmsApp">
 
+  <!-- MAIN CONTENT -->
   <div class="container">
-    <div class="header clearfix">
-      <h2 class="text-muted">Fullstack JSCms</h2>
-    </div>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar navbar-default">
+      <ul class="navbar-nav nav">
+          <li class="nav-item">
+            <a ui-sref="home" ui-sref-active="active">Home</a>
+          </li>
+          <li class="nav-item">
+            <a ui-sref="about" ui-sref-active="active">About</a>
+          </li>
+      </ul>
+    </nav>
+
+    <!-- VIEWS -->
+    <ui-view></ui-view>
+
   </div>
 
   <!-- Angular Core Scripts-->
@@ -26,6 +41,7 @@
 
   <!-- App Scripts -->
   <script src="app/app.js"></script>
+  <script src="app/services/services.js"></script>
 
 </body>
 </html>
