@@ -1,7 +1,8 @@
 'use strict';
 
 var Sequelize = require('sequelize');
-var connection = new Sequelize('jscms', 'root', '', {
+var env = process.env.NODE_ENV || 'development';
+var connection = new Sequelize('jscms', '', '', {
   dialect: 'postgres'
 });
 
@@ -21,6 +22,10 @@ db.Post.belongsTo(db.User);
 db.Post.belongsTo(db.Category);
 db.Category.hasMany(db.Post);
 
-connection.sync();
+// db.User.sync();
+// db.Post.sync();
+// db.Category.sync();
+
+// connection.sync();
 
 module.exports = db;

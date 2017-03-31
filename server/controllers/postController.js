@@ -1,12 +1,14 @@
-var Post = require('../models').Post;
-var User = require('../models').User;
+// var Post = require('../models').Post;
+// var User = require('../models').User;
+
+var db = require('../config/db');
 
 module.exports = {
 
   // GET all posts
   getPosts: function(req, res) {
-    Post.findAll({
-      include: [User]
+    db.Post.findAll({
+      include: [db.User]
     })
     .then(function(posts) {
       res.json(posts);
@@ -18,7 +20,7 @@ module.exports = {
 
   // GET single post
   getPost: function(req, res) {
-    Post.findById(req.params.id)
+    db.Post.findById(req.params.id)
     .then(function(post) {
       res.json(post);
     })
@@ -29,7 +31,7 @@ module.exports = {
 
   // POST single post
   postPost: function(req, res) {
-    Post.create({
+    db.Post.create({
       title: req.body.title,
       content: req.body.content
     })
@@ -43,7 +45,7 @@ module.exports = {
 
   // PUT single post
   putPost: function(req, res) {
-    Post.update({
+    db.Post.update({
       title: req.body.title,
       content: req.body.content
     }, {
@@ -61,7 +63,7 @@ module.exports = {
 
   // DELETE single post
   deletePost: function(req, res) {
-    Post.destroy({
+    db.Post.destroy({
       where: {
         id: req.params.id
       }
