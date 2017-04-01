@@ -7,7 +7,7 @@ angular.module('jscmsApp.showposts', [])
       $scope.posts = posts;
     })
     .catch(function(error) {
-      coneole.log(error);
+      console.log(error);
     });
   };
   initPostList();
