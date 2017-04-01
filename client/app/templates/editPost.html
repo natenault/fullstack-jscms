@@ -1,0 +1,37 @@
+<article>
+
+  <div class="col-sm-5">
+    <form name="postForm" novalidate>
+
+      <!-- POST TITLE -->
+      <div class="form-group">
+        <label class="ng-hide" for="title">Post Title</label>
+        <input type="text" name="title" class="form-control" ng-model="postData.title" placeholder="Post Title" required>
+        <div class="help-block" ng-show="postForm.title.$error.required && !postForm.title.$pristine">
+          <span>Post title required!</span>
+        </div>
+      </div>
+
+      <!-- POST CONTENT -->
+      <div class="form-group">
+        <label ng-hide="true" for="content">Post Content</label>
+        <textarea name="content" class="form-control" ng-model="postData.content" required></textarea>
+      </div>
+
+      <!-- FORM ACTIONS -->
+      <div class="form-group">
+        <!-- ADD POST -->
+        <button class="btn" type="submit" ng-hide="addButton || postForm.title.$invalid" ng-click="addSinglePost()" ng-disabled="postForm.title.$invalid">PUBLISH</button>
+        <!-- UPDATE POST -->
+        <button class="btn" type="submit" ng-hide="updateButton" ng-click="updateSinglePost()" ng-disabled="postForm.title.$invalid">UPDATE</button>
+        <!-- DELETE POST -->
+        <button class="btn" type="submit" ng-hide="deleteButton" ng-click="deleteSinglePost()">DELETE</button>
+      </div>
+    </form>
+  </div>
+  <div class="col-sm-5">
+    <h2 ng-model="postData.title" class="preview-title">{{postData.title}}</h2>
+    <div class="preview-content">{{postData.content}}</div>
+  </div>
+
+</article>
