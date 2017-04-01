@@ -5,16 +5,16 @@ var postController = require('./controllers/postController.js');
 router.get('/posts', postController.getPosts);
 
 // GET Return single post
-router.get('/posts/:postId/', postController.getPost);
+router.get('/posts/:postId', postController.getPost);
 
 // POST Add single post
-router.post('/posts/', postController.postPost);
+router.post('/posts', postController.postPost);
 
 // PUT Edit single post
-router.put('/posts/:postId/', postController.putPost);
+router.put('/posts/:postId', postController.putPost);
 
 // DELETE Delete single post
-router.delete('/posts/:postId/', postController.deletePost);
+router.delete('/posts/:postId', postController.deletePost);
 
 // GET Return all posts by single user
 // router.ACTION('/posts/:userId
