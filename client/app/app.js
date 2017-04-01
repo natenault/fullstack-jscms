@@ -1,6 +1,10 @@
 angular.module('jscmsApp', [
   'jscmsApp.services',
   'jscmsApp.showposts',
+  'jscmsApp.showpost',
+  'jscmsApp.editpost',
+  'jscmsApp.addpost',
+  'ngMessages',
   'ngRoute'
 ])
 .config(function($routeProvider) {
@@ -13,7 +17,7 @@ angular.module('jscmsApp', [
     })
     // POST single post
     .when('/posts/add', {
-      templateUrl: 'app/templates/addPost.html',
+      templateUrl: 'app/templates/editPost.html',
       controller: 'AddPostCtrl'
     })
     // GET single post
