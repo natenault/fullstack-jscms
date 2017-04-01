@@ -1,4 +1,4 @@
-angular.module('jscmsApp')
+angular.module('jscmsApp.services', [])
 .factory('DataService', function($http) {
 
   var getAllPosts = function() {
