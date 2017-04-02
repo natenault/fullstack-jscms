@@ -1,0 +1,36 @@
+<div class="container">
+  <article>
+    <h1>Signup</h1>
+    <form name="signupForm" novalidate>
+
+      <!-- USERNAME -->
+      <div class="form-group">
+        <label class="ng-hide" for="username">Username</label>
+        <input type="text" name="username" class="form-control" ng-model="userData.username" placeholder="Username" required>
+        <div class="help-block" ng-show="signupForm.username.$error.required && !signupForm.username.$pristine">
+          <span>Username required!</span>
+        </div>
+      </div>
+
+      <!-- PASSWORD -->
+      <div class="form-group">
+        <label class="ng-hide" for="password">Password</label>
+        <input type="password" name="password" class="form-control" ng-model="userData.password" placeholder="Password" required>
+        <div class="help-block" ng-show="signupForm.password.$error.required && !signupForm.password.$pristine">
+          <span>Password required!</span>
+        </div>
+      </div>
+
+      <!-- FORM ACTIONS -->
+      <div class="form-group">
+        <!-- SUBMIT -->
+        <button
+          class="btn"
+          type="submit"
+          ng-click="signupUser()"
+          ng-disabled="signupForm.$invalid">SIGNUP</button>
+      </div>
+    </form>
+
+  </article>
+</div>
