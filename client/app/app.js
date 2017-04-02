@@ -4,6 +4,7 @@ angular.module('jscmsApp', [
   'jscmsApp.showpost',
   'jscmsApp.editpost',
   'jscmsApp.addpost',
+  'jscmsApp.registeruser',
   'hc.marked',
   'ngSanitize',
   'ngMessages',
@@ -31,6 +32,11 @@ angular.module('jscmsApp', [
     .when('/posts/:postId/edit', {
       templateUrl: 'app/templates/editPost.html',
       controller: 'EditPostCtrl'
+    })
+    // POST single user
+    .when('/register', {
+      templateUrl: 'app/templates/registerUser.html',
+      controller: 'RegisterUserCtrl'
     })
     .otherwise({
       redirectTo: '/posts'
