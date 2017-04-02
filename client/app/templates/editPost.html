@@ -1,6 +1,6 @@
 <article>
 
-  <div class="col-sm-5">
+  <div class="col-sm-6">
     <form name="postForm" novalidate>
 
       <!-- POST TITLE -->
@@ -29,9 +29,10 @@
       </div>
     </form>
   </div>
-  <div class="col-sm-5">
+  <div class="col-sm-6">
     <h2 ng-model="postData.title" class="preview-title">{{postData.title}}</h2>
-    <div class="preview-content">{{postData.content}}</div>
+    <div marked="postData.content" />
+    <!-- <div class="preview-content">{{postData.content}}</div> -->
   </div>
 
 </article>

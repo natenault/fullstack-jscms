@@ -14,30 +14,30 @@
 </head>
 <body ng-app="jscmsApp">
 
-  <!-- MAIN CONTENT -->
-  <div class="container">
+  <!-- NAVIGATION -->
+  <nav class="navbar navbar-default">
+    <ul class="navbar-nav nav">
+        <li class="nav-item">
+          <a href="/#/posts">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="/#/posts/add">Add Post</a>
+        </li>
+    </ul>
+  </nav>
 
-    <!-- NAVIGATION -->
-    <nav class="navbar navbar-default">
-      <ul class="navbar-nav nav">
-          <li class="nav-item">
-            <a href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a href="/#/posts/add">Add Post</a>
-          </li>
-      </ul>
-    </nav>
-
-    <!-- VIEWS -->
-    <div ng-view></div>
-
-  </div>
+  <!-- VIEWS -->
+  <div ng-view></div>
 
   <!-- Angular Core Scripts-->
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.min.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-sanitize.min.js"></script>
+
+  <!-- Angular Markdown -->
+  <script src="lib/marked/marked.min.js"></script>
+  <script src="lib/angular-marked/dist/angular-marked.js"></script>
 
   <!-- App Scripts -->
   <script src="app/services/services.js"></script>

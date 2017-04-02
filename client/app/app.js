@@ -4,6 +4,8 @@ angular.module('jscmsApp', [
   'jscmsApp.showpost',
   'jscmsApp.editpost',
   'jscmsApp.addpost',
+  'hc.marked',
+  'ngSanitize',
   'ngMessages',
   'ngRoute'
 ])
@@ -33,5 +35,7 @@ angular.module('jscmsApp', [
     .otherwise({
       redirectTo: '/posts'
     });
+
+  // markedProvider.setOptions({gfm: true});
 
 });

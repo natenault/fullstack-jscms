@@ -14,5 +14,8 @@
     "client/lib",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "angular-marked": "^1.2.2"
+  }
 }

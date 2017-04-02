@@ -1,10 +1,12 @@
-<section>
-  <article>
-    <h4>{{post.title}}</h4>
-    <div class="entry-content">{{post.content}}</div>
-  </article>
-  <aside>
-    <!-- EDIT POST -->
-    <a class="btn" ng-href="/#/posts/{{post.id}}/edit">EDIT</a>
-  </aside>
-</section>
+<div class="container">
+  <section>
+    <article>
+      <h1>{{post.title}}</h1>
+      <div class="entry-content" marked="post.content" />
+    </article>
+    <aside>
+      <!-- EDIT POST -->
+      <a class="btn" ng-href="/#/posts/{{post.id}}/edit">EDIT</a>
+    </aside>
+  </section>
+</div>
