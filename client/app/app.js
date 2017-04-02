@@ -36,6 +36,4 @@ angular.module('jscmsApp', [
       redirectTo: '/posts'
     });
 
-  // markedProvider.setOptions({gfm: true});
-
 });
