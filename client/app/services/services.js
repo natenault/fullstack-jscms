@@ -63,4 +63,22 @@ angular.module('jscmsApp.services', [])
     deleteOnePost: deleteOnePost
   };
 
+})
+.factory('UserService', function($http) {
+
+  var registerNewUser = function(data) {
+    return $http({
+      method: 'POST',
+      url: '/api/register',
+      data: data
+    })
+    .then(function(resp) {
+      return resp.data;
+    });
+  };
+
+  return {
+    registerNewUser: registerNewUser
+  };
+
 });
