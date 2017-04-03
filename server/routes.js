@@ -3,9 +3,9 @@ var postController = require('./controllers/postController.js');
 var userController = require('./controllers/userController.js');
 
 
-/////////////////////////////////////////////////
+//===============================================
 // POST ROUTES
-/////////////////////////////////////////////////
+//===============================================
 
 // GET Return all posts
 router.get('/posts', postController.getPosts);
@@ -23,9 +23,9 @@ router.put('/posts/:postId', postController.putPost);
 router.delete('/posts/:postId', postController.deletePost);
 
 
-/////////////////////////////////////////////////
+//===============================================
 // USER ROUTES
-/////////////////////////////////////////////////
+//===============================================
 
 // POST Add single user
 router.post('/register', userController.addNewUser);
