@@ -1,0 +1,21 @@
+{
+  "name": "fullstack-jscms",
+  "description": "> A barebones CMS built on Node and React",
+  "authors": [
+    "Nate Nault <nate@nathannault.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/natenault/fullstack-jscms",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "client/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-marked": "^1.2.2"
+  }
+}

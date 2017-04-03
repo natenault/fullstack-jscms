@@ -1,0 +1,285 @@
+
+/*
+  Project Name: HRR22 CSS Project
+  Description: A project to expand knowledge of CSS.
+  Version: 1.0.0
+*/
+
+/* # TABLE OF CONTENTS
+- HTML5 Reset
+  - Baseline Normalize
+  - Box Sizing
+  - Float Clearing
+- Defaults
+  - Typographical Elements
+  - Headings
+  - Objects
+  - Gallery
+  - Forms
+  - Tables
+- Structure and Layout
+  - Site Containers
+  - Column Widths and Positions
+  - Column Classes
+- Site Header
+  - Title Area
+- Site Navigation
+  - Accessible Menu
+  - Site Header Navigation
+- Content Area
+  - Entries
+  - Entry Meta
+  - Pagination
+  - Comments
+- Page Templates
+- Sidebars
+  - Widgets
+- Site Footer
+*/
+
+
+/* # BREAKPOINTS
+@media only screen and (min-width: 768px) {}
+@media only screen and (min-width: 992px) {}
+*/
+
+/* # COLORS
+$white: #ffffff;
+$black: #333333;
+$light-gray: #f5f5f5;
+$gray: #eeeeee;
+$dark-gray: #dddddd;
+$red: #c3251d;
+$red-light: #e45049;
+$red-dark: #801813;
+*/
+
+/* # Defaults
+==================================================================================================== */
+
+/* ## Typographical Elements
+--------------------------------------------- */
+
+/* ## Headings
+--------------------------------------------- */
+
+/* ## Objects
+--------------------------------------------- */
+/* includes: embed, iframe, img, object, video, figure */
+
+/* ## Gallery
+--------------------------------------------- */
+
+/* ## Forms
+--------------------------------------------- */
+
+/* ### Fields */
+
+/* ### Buttons */
+
+
+/* ## Tables
+--------------------------------------------- */
+
+
+
+/* # Structure and Layout
+==================================================================================================== */
+
+/* ## Site Containers
+--------------------------------------------- */
+
+/* ## Column Widths and Positions
+--------------------------------------------- */
+
+/* ## Column Classes
+--------------------------------------------- */
+/* Link: http://twitter.github.io/bootstrap/assets/css/bootstrap-responsive.css */
+
+
+
+/* # Site Header
+==================================================================================================== */
+
+/* ## Title Area
+--------------------------------------------- */
+
+
+
+/* # Site Navigation
+==================================================================================================== */
+
+/* ## Mobile Menu
+--------------------------------------------- */
+
+/* ## Site Header Navigation
+--------------------------------------------- */
+
+
+
+/* # Content Area
+==================================================================================================== */
+
+/* ## Entries
+--------------------------------------------- */
+
+.entry-list .entry {
+  margin-bottom: 5%;
+  padding-bottom: 5%;
+  border-bottom: 2px solid #ccc;
+}
+
+@media only screen and (min-width: 768px) {
+
+  .entry-list .entry {
+    margin-bottom: 60px;
+    padding-bottom: 60px;
+  }
+
+}
+
+/* ## Entry Meta
+--------------------------------------------- */
+
+.entry-meta {
+  margin-bottom: 20px;
+}
+
+.entry-meta .glyphicon {
+  color: #337ab7;
+}
+
+/* ## Pagination
+--------------------------------------------- */
+
+/* ## Comments
+--------------------------------------------- */
+
+
+
+/* # Page Templates
+==================================================================================================== */
+
+/* ## Add/Edit Post
+--------------------------------------------- */
+
+.entry-form .entry-header {
+  border-color: #cccccc;
+  border-width: 0 0 1px;
+  border-style: solid;
+  display: flex;
+  flex-flow: row nowrap;
+  padding-bottom: 10px;
+}
+
+.entry-header .form-group {
+  flex-grow: 1;
+  margin-bottom: 0;
+}
+
+.entry-form .entry-title {
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 36px;
+  height: auto;
+  padding-bottom: 0;
+  padding: top: 0;
+  transition: none;
+}
+
+.entry-form .entry-title:hover,
+.entry-form .entry-title:focus {
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+
+.entry-actions {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.entry-actions button:not(:last-of-type) {
+  margin-bottom: 5px;
+}
+
+.entry-editor {
+  display: flex;
+  flex-direction: column;
+}
+
+.entry-editor .form-group {
+  margin-bottom: 0;
+}
+
+.entry-form textarea.entry-markdown {
+  border: none;
+  box-shadow: none;
+  min-height: calc(100vh - 200px);
+  padding: 21px 20px 36px;
+  resize: none;
+}
+
+.entry-form textarea.entry-markdown:hover
+.entry-form textarea.entry-markdown:focus {
+  border: none;
+  box-shadow: none;
+}
+
+.entry-preview {
+  border-top: 1px solid #cccccc;
+  padding: 21px 20px 36px;
+  position: relative;
+}
+
+.entry-preview > * {
+  margin-top: 0;
+}
+
+@media only screen and (min-width: 768px) {
+
+  .entry-actions {
+    flex-flow: row nowrap;
+  }
+
+  .entry-actions button:not(:last-of-type) {
+    margin-bottom: 0;
+    margin-right: 5px;
+  }
+
+  .entry-editor {
+    flex-direction: row;
+  }
+
+  .entry-editor > * {
+    width: 50%;
+  }
+
+  .entry-preview {
+    border-left: 1px solid #cccccc;
+    border-top: none;
+  }
+
+}
+
+/* # Sidebars
+==================================================================================================== */
+
+/* ## Widgets
+--------------------------------------------- */
+
+/* # Site Footer
+==================================================================================================== */
+
+.site-footer {
+  background-color: #f5f5f5;
+  margin-top: 30px;
+  padding: 30px 0;
+}
+
+.site-footer p {
+  margin-bottom: 0;
+}

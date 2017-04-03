@@ -1,0 +1,40 @@
+<article>
+    <form name="postForm" class="entry-form" novalidate>
+      <div class="container">
+
+      <!-- POST HEADER -->
+        <div class="entry-header">
+          <!-- POST TITLE -->
+          <div class="form-group">
+            <label class="ng-hide" for="title">Post Title</label>
+            <input type="text" name="title" class="entry-title form-control" ng-model="postData.title" placeholder="Your Post Title" required>
+            <div class="help-block" ng-show="postForm.title.$error.required && !postForm.title.$pristine">
+              <span>Post title required!</span>
+            </div>
+          </div>
+
+          <!-- FORM ACTIONS -->
+          <div class="entry-actions">
+            <!-- ADD POST -->
+            <button class="btn btn-primary" type="submit" ng-hide="addButton || postForm.title.$invalid" ng-click="addSinglePost()" ng-disabled="postForm.title.$invalid">PUBLISH</button>
+            <!-- UPDATE POST -->
+            <button class="btn btn-primary" type="submit" ng-hide="updateButton" ng-click="updateSinglePost()" ng-disabled="postForm.title.$invalid">UPDATE</button>
+            <!-- DELETE POST -->
+            <button class="btn btn-danger" type="submit" ng-hide="deleteButton" ng-click="deleteSinglePost()">DELETE</button>
+          </div>
+        </div>
+
+        <div class="entry-editor">
+          <!-- POST CONTENT -->
+          <div class="form-group">
+            <label ng-hide="true" for="content">Post Content</label>
+            <textarea name="content" class="entry-markdown form-control" rows="6" ng-model="postData.content" placeholder="Start writing..." required></textarea>
+          </div>
+
+          <!-- PREVIEW -->
+          <div class="entry-preview" marked="postData.content"></div>
+        </div>
+
+      </div>
+    </form>
+</article>

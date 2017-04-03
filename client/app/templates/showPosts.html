@@ -1,0 +1,16 @@
+<div class="container">
+  <section  class="col-md-6 col-md-offset-3 entry-list">
+    <h1>New Posts</h1>
+    <article ng-repeat="post in posts" class="entry">
+      <div class="page-header">
+        <h2 class="entry-title">{{post.title}}</h2>
+      </div>
+      <div class="entry-meta">
+        <span class="glyphicon glyphicon-calendar"></span>
+        {{post.createdAt | date:'MMMM d, yyyy'}}
+      </div>
+      <div class="entry-content" marked="post.content"></div>
+      <a class="btn btn-primary" ng-href="/#/posts/{{post.id}}">Read More</a>
+    </article>
+  </section>
+</div>

@@ -1,4 +1,4 @@
-var db = require('../config/db.js');
+var db = require('../config/db');
 
 module.exports = {
 
@@ -17,7 +17,7 @@ module.exports = {
 
   // GET single post
   getPost: function(req, res) {
-    db.Post.findById(req.params.id)
+    db.Post.findById(req.params.postId)
     .then(function(post) {
       res.json(post);
     })
@@ -33,7 +33,7 @@ module.exports = {
       content: req.body.content
     })
     .then(function(post) {
-      res.sendStatus(201);
+      res.status(201).json(post);
     })
     .catch(function(err) {
       res.send({error: err});
@@ -47,7 +47,7 @@ module.exports = {
       content: req.body.content
     }, {
       where: {
-        id: req.params.id
+        id: req.params.postId
       }
     })
     .then(function(updatedPost) {
@@ -62,7 +62,7 @@ module.exports = {
   deletePost: function(req, res) {
     db.Post.destroy({
       where: {
-        id: req.params.id
+        id: req.params.postId
       }
     })
     .then(function(deletedPost) {

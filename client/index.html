@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Fullstack JSCms</title>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body ng-app="jscmsApp">
+
+  <!-- NAVIGATION -->
+  <nav class="navbar navbar-inverse">
+    <div class="container">
+      <ul class="navbar-nav nav">
+          <li class="nav-item">
+            <a href="/#/posts">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="/#/posts/add">Add Post</a>
+          </li>
+          <li class="nav-item">
+            <a href="/#/register">Register</a>
+          </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- VIEWS -->
+  <div ng-view></div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer footer">
+    <div class="container">
+      <p>Nate Nault</p>
+    </div>
+  </footer>
+
+  <!-- Angular Core Scripts-->
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-sanitize.min.js"></script>
+
+  <!-- Angular Markdown -->
+  <script src="lib/marked/marked.min.js"></script>
+  <script src="lib/angular-marked/dist/angular-marked.js"></script>
+
+  <!-- App Scripts -->
+  <script src="app/services/services.js"></script>
+  <script src="app/components/showPosts.js"></script>
+  <script src="app/components/showPost.js"></script>
+  <script src="app/components/editPost.js"></script>
+  <script src="app/components/addPost.js"></script>
+  <script src="app/components/registerUser.js"></script>
+  <script src="app/app.js"></script>
+
+</body>
+</html>
