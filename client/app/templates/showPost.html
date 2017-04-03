@@ -1,14 +1,18 @@
 <div class="container">
   <section class="col-md-6 col-md-offset-3">
-    <article>
+    <article class="entry">
       <div class="page-header">
-        <h1>{{post.title}}</h1>
+        <h1 class="entry-title">{{post.title}}</h1>
+      </div>
+      <div class="entry-meta">
+        <span class="glyphicon glyphicon-calendar"></span>
+        {{post.createdAt | date:'MMMM d, yyyy'}}
       </div>
       <div class="entry-content" marked="post.content"></div>
     </article>
     <aside>
       <!-- EDIT POST -->
-      <a class="btn btn-default" ng-href="/#/posts/{{post.id}}/edit">EDIT</a>
+      <a class="btn btn-primary" ng-href="/#/posts/{{post.id}}/edit">EDIT</a>
     </aside>
   </section>
 </div>

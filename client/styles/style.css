@@ -123,8 +123,31 @@ $red-dark: #801813;
 /* ## Entries
 --------------------------------------------- */
 
+.entry-list .entry {
+  margin-bottom: 5%;
+  padding-bottom: 5%;
+  border-bottom: 2px solid #ccc;
+}
+
+@media only screen and (min-width: 768px) {
+
+  .entry-list .entry {
+    margin-bottom: 60px;
+    padding-bottom: 60px;
+  }
+
+}
+
 /* ## Entry Meta
 --------------------------------------------- */
+
+.entry-meta {
+  margin-bottom: 20px;
+}
+
+.entry-meta .glyphicon {
+  color: #337ab7;
+}
 
 /* ## Pagination
 --------------------------------------------- */
@@ -140,42 +163,104 @@ $red-dark: #801813;
 /* ## Add/Edit Post
 --------------------------------------------- */
 
-.post-form .post-title {
-  border-color: rgba(0,0,0,0);
+.entry-form .entry-header {
+  border-color: #cccccc;
   border-width: 0 0 1px;
   border-style: solid;
+  display: flex;
+  flex-flow: row nowrap;
+  padding-bottom: 10px;
+}
+
+.entry-header .form-group {
+  flex-grow: 1;
+  margin-bottom: 0;
+}
+
+.entry-form .entry-title {
+  border: none;
   border-radius: 0;
   box-shadow: none;
   font-size: 36px;
   height: auto;
-  transition: border-bottom-color 0.2s ease;
+  padding-bottom: 0;
+  padding: top: 0;
+  transition: none;
 }
 
-.post-form .post-title:hover {
-  border-color: #ddd;
+.entry-form .entry-title:hover,
+.entry-form .entry-title:focus {
+  border: none;
   box-shadow: none;
   outline: none;
 }
 
-.post-form .post-title:focus {
-  border-color: #666;
-  box-shadow: none;
-  outline: none;
+.entry-actions {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
 }
 
-.post-form textarea.post-editor {
+.entry-actions button:not(:last-of-type) {
+  margin-bottom: 5px;
+}
+
+.entry-editor {
+  display: flex;
+  flex-direction: column;
+}
+
+.entry-editor .form-group {
+  margin-bottom: 0;
+}
+
+.entry-form textarea.entry-markdown {
+  border: none;
+  box-shadow: none;
   min-height: calc(100vh - 200px);
+  padding: 21px 20px 36px;
   resize: none;
 }
 
-.action-buttons {
-  padding-top: 30px;
+.entry-form textarea.entry-markdown:hover
+.entry-form textarea.entry-markdown:focus {
+  border: none;
+  box-shadow: none;
+}
+
+.entry-preview {
+  border-top: 1px solid #cccccc;
+  padding: 21px 20px 36px;
+  position: relative;
+}
+
+.entry-preview > * {
+  margin-top: 0;
 }
 
 @media only screen and (min-width: 768px) {
 
-  .action-buttons {
-    text-align: right;
+  .entry-actions {
+    flex-flow: row nowrap;
+  }
+
+  .entry-actions button:not(:last-of-type) {
+    margin-bottom: 0;
+    margin-right: 5px;
+  }
+
+  .entry-editor {
+    flex-direction: row;
+  }
+
+  .entry-editor > * {
+    width: 50%;
+  }
+
+  .entry-preview {
+    border-left: 1px solid #cccccc;
+    border-top: none;
   }
 
 }
