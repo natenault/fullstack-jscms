@@ -1,23 +1,9 @@
 'use strict';
 
 var Sequelize = require('sequelize');
-
-// Production
-if (process.env.DATABASE_URL) {
-  var db = new Sequelize(process.env.DATABASE_URL, {
-    dialect: 'postgres',
-    logging: false
-  });
-} else {
-  var db = new Sequelize('jscms', process.env.POSTGRES_USER, '', {
-    dialect: 'postgres',
-    logging: false
-  });
-}
-
-// var db = new Sequelize('jscms', '', '', {
-//   dialect: 'postgres'
-// });
+var db = new Sequelize('jscms', '', '', {
+  dialect: 'postgres'
+});
 
 // Models
 var Post = db.define('Post', {
