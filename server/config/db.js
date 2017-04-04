@@ -19,18 +19,6 @@ var Post = db.define('Post', {
   }
 });
 
-var User = db.define('User', {
-  username: {
-    type: Sequelize.STRING,
-    unique: true,
-    required: true,
-    allowNull: false
-  },
-  password: {
-    type: Sequelize.STRING,
-  }
-});
-
 var Category = db.define('Category', {
   title: {
     type: Sequelize.STRING,
@@ -40,14 +28,10 @@ var Category = db.define('Category', {
 });
 
 // Associations
-User.hasMany(Post);
-Post.belongsTo(User);
 Post.belongsTo(Category);
 Category.hasMany(Post);
 
-User.sync();
 Post.sync();
 Category.sync();
 
-exports.User = User;
 exports.Post = Post;

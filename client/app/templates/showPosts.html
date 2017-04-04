@@ -10,7 +10,9 @@
         {{post.createdAt | date:'MMMM d, yyyy'}}
       </div>
       <div class="entry-content" marked="post.content"></div>
-      <a class="btn btn-primary" ng-href="/#/posts/{{post.id}}">Read More</a>
+      <div class="entry-footer">
+        <a class="btn btn-primary" ng-href="/#/posts/{{post.id}}">Read More</a>
+      </div>
     </article>
   </section>
 </div>

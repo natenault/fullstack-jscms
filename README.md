@@ -1,12 +1,6 @@
 # Fullstack JSCms
 
-> A barebones CMS built on Node and React
-
-## Team
-
-  - __Product Owner__: teamMember
-  - __Scrum Master__: teamMember
-  - __Development Team Members__: teamMember, teamMember
+> A barebones CMS built on Node and AngularJS
 
 ## Table of Contents
 
@@ -15,20 +9,18 @@
 1. [Development](#development)
     1. [Installing Dependencies](#installing-dependencies)
     1. [Tasks](#tasks)
-1. [Team](#team)
-1. [Contributing](#contributing)
 
 ## Usage
 
-> Some usage instructions
+> Add, update, and delete posts in Markdown with a live preview of the post content.
 
 ## Requirements
 
-- Node 0.10.x
-- Redis 2.6.x
-- Postgresql 9.1.x
-- etc
-- etc
+- Node 4.0.0
+- Express 4.15.2
+- Postgresql 9.6.2
+- Sequelize 3.30.4
+- AngularJS 1.5.5
 
 ## Development
 
@@ -45,8 +37,3 @@ bower install
 ### Roadmap
 
 View the project roadmap [here](LINK_TO_PROJECT_ISSUES)
-
-
-## Contributing
-
-See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidelines.

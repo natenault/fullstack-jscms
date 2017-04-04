@@ -4,9 +4,7 @@ module.exports = {
 
   // GET all posts
   getPosts: function(req, res) {
-    db.Post.findAll({
-      include: [db.User]
-    })
+    db.Post.findAll({})
     .then(function(posts) {
       res.json(posts);
     })
