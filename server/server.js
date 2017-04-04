@@ -17,7 +17,7 @@ app.use(parser.urlencoded({extended: true}));
 app.use(parser.json());
 
 // Serve static assets from client folder
-app.use(express.static(path.join(__dirname, '../client')));
+app.use(express.static(__dirname + '../client'));
 
 // Routes
 app.use('/api', routes);
