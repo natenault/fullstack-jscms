@@ -1,6 +1,6 @@
-# Fullstack JSCms
+# Markdown Notes
 
-> A barebones CMS built on Node and AngularJS
+> An app for writing and organizing rich text notes.
 
 ## Table of Contents
 
@@ -12,7 +12,7 @@
 
 ## Usage
 
-> Add, update, and delete posts in Markdown with a live preview of the post content.
+> Add, update, and delete notes in Markdown with a live preview of the note content.
 
 ## Requirements
 
